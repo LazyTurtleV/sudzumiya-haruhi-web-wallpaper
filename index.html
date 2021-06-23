@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="animation.css">
+
+    <title>MySudzumi</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="time">17:00</div>
+        <div class="date">2021-06-21 Mon.</div>
+        
+        <div class="buttonStyle">
+            <div class="chevron up" id="enterPanelButton">></div>
+        </div>
+        <div class="enterPanel" id="enterPanel">
+            <input type="text" class="panelElementStyle enterPanelStyle" id="taskName" placeholder="Таска" lang="ru">
+            <input type="text" class="panelElementStyle enterPanelStyle" id="taskDetails" placeholder="Деталі" lang="ru">
+            <button class="addTaskBtn">Додати таску</button>
+        </div>
+
+        <div class="buttonStyle">
+            <div class="chevron up" id="tasksQueueButton">></div>
+        </div>
+        <div class="tasksQueue" id="tasksQueue"></div>
+    </div>
+    <img src="img/img0.png" alt="Haruhi" id="MainPicture">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="module" src="index.js"></script>
+    <script type="module" src="listeners.js"></script>
+</body>
+</html>

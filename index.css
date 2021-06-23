@@ -1,0 +1,165 @@
+body{
+    background: url("img/bg.jpg");
+    background-size: cover;
+}
+
+.alertWindow{
+    opacity: 0.5;
+}
+
+.sidebar {
+    width: 300px;
+    height: 680px;
+    position: fixed;
+    right: 100px;
+    top: 50px;
+}
+
+.time {
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    font-family: "Microsoft YaHei";
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.date {
+    background: rgba(150,150,150,0.6);
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Microsoft YaHei";
+    color: rgba(255,255,255,1);
+    padding: 5px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.buttonStyle{
+    width: 100%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.up{
+    transform: rotate(90deg);
+}
+
+.down{
+    transform: rotate(270deg);
+}
+
+.chevron{
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: color .2s, transform .5s;
+}
+
+.enterPanel{
+    padding: 10px 5px;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    text-align: center;
+    font-family: "Microsoft YaHei";
+	color: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    margin-top: 5px;
+    height: auto;
+    margin-bottom: 10px;
+    border-width: 1px;
+    border-color: #aaa;
+    display: none;
+}
+
+.addTaskBtn{
+    margin-top: 8px;
+    width: 90%;
+    border: solid;
+    border-width: 1px;
+    border-color: #aaa;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.panelElementStyle{
+    border-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: #aaa;
+    color: #fff;
+    outline: none;
+    background: transparent;
+}
+
+.enterPanelStyle{
+    width: 90%;
+    padding: 5px;
+}
+
+.tasksQueue{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Microsoft YaHei";
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.tasksQueue::marker{
+    display: none;
+}
+
+
+.taskNode{
+    width: 100%;
+    height: 66px;
+    margin-top: 20px;
+    border: none;
+    background: rgba(150, 150, 150, 0.5);
+    border-radius: 5px;
+    transition: background .2s;
+}
+
+.taskNode:first-of-type{
+    margin-top: 0px;
+}
+
+.NodeCircle{
+    width: 90%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 5px;
+    right: 0px;
+    border: solid;
+    border-width: 3px;
+    border-radius: 15px;
+    color: rgb(54, 143, 168);
+}
+
+#MainPicture{
+    height: 879px;
+    width: 541px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+}

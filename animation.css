@@ -1,0 +1,11 @@
+.chevron:hover{
+    color: rgba(12, 75, 94, 0.5);
+}
+
+.addTaskBtn:hover{
+    background: rgba(80,190,220, 0.7); /*rgba(255, 0, 0, 0.5);*/
+}
+
+.taskNode:hover{
+    background: rgba(206, 206, 206, 0.836);
+}
