@@ -9,3 +9,13 @@
 .taskNode:hover{
     background: rgba(206, 206, 206, 0.836);
 }
+
+@keyframes slidein{
+    from{
+        transform: scaleX(0);
+    }
+
+    to{
+        transform: scaleX(1);
+    }
+}

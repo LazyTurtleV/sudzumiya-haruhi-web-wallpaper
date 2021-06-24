@@ -64,7 +64,7 @@ body{
 .enterPanel{
     padding: 10px 5px;
     background: rgba(0, 0, 0, 0.6);
-    width: 100%;
+    width: auto;
     text-align: center;
     font-family: "Microsoft YaHei";
 	color: rgba(0,0,0,0.5);
@@ -107,26 +107,38 @@ body{
 }
 
 .tasksQueue{
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 410px;
     text-align: center;
     font-size: 15px;
     font-family: "Microsoft YaHei";
     color: rgba(0, 0, 0, 0.5);
     margin-top: 10px;
-    overflow: hidden;
+    overflow-y: scroll;
     display: none;
+    scroll-behavior: auto;
 }
 
-.tasksQueue::marker{
-    display: none;
+.tasksQueue::-webkit-scrollbar {
+    width: 12px;
 }
-
+  
+.tasksQueue::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+  
+.tasksQueue::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    cursor: pointer;
+}
 
 .taskNode{
-    width: 100%;
+    width: 260px;
     height: 66px;
     margin-top: 20px;
+    margin-left: 0;
     border: none;
     background: rgba(150, 150, 150, 0.5);
     border-radius: 5px;

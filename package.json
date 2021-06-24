@@ -1,5 +1,8 @@
 {
     "name": "my-awesome-package",
     "version": "1.0.0",
-    "dependencies": {}
+    "dependencies": {},
+    "devDependencies": {
+        "@types/jquery": "^3.5.5"
+    }
 }
