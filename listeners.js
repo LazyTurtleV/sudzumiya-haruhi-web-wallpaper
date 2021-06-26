@@ -1,15 +1,20 @@
-import {changeButtonAppearance} from "./UIfuncs.js";
-import { isButtonActive, showPanel, hidePanel } from "./button.js";
+import { isButtonActive, showPanel, hidePanel, addTask, changeButtonAppearance } from "./button.js";
 
 //chevron-button clicked
-for(let htmlEl of document.getElementsByClassName("chevron")){
-    htmlEl.addEventListener("click", function(){
-        changeButtonAppearance(this)
+export function addListeners(params) {
+    for(let htmlEl of document.getElementsByClassName("chevron")){
+        htmlEl.addEventListener("click", onChevronButtonClick);
+    }
+    
+    document.getElementById("addTaskButton").addEventListener("click", addTask);
+}
 
-        if(isButtonActive(this)){
-            showPanel(this);
-        }else{
-            hidePanel(this);
-        }
-    });
+function onChevronButtonClick(){
+    changeButtonAppearance(this)
+    
+    if(isButtonActive(this)){
+        showPanel(this);
+    }else{
+        hidePanel(this);
+    }
 }

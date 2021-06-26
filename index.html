@@ -12,16 +12,16 @@
 </head>
 <body>
     <div class="sidebar">
-        <div class="time">17:00</div>
-        <div class="date">2021-06-21 Mon.</div>
+        <div class="time" id="time"></div>
+        <div class="date" id="date"></div>
         
         <div class="buttonStyle">
             <div class="chevron up" id="enterPanelButton">></div>
         </div>
         <div class="enterPanel" id="enterPanel">
-            <input type="text" class="panelElementStyle enterPanelStyle" id="taskName" placeholder="Таска" lang="ru">
-            <input type="text" class="panelElementStyle enterPanelStyle" id="taskDetails" placeholder="Деталі" lang="ru">
-            <button class="addTaskBtn">Додати таску</button>
+            <input type="text" class="panelElementStyle enterPanelStyle" id="taskName" placeholder="Таска">
+            <input type="text" class="panelElementStyle enterPanelStyle" id="taskDetails" placeholder="Деталі">
+            <button class="addTaskBtn" id="addTaskButton">Додати таску</button>
         </div>
 
         <div class="buttonStyle">
@@ -34,6 +34,5 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script type="module" src="index.js"></script>
-    <script type="module" src="listeners.js"></script>
 </body>
 </html>

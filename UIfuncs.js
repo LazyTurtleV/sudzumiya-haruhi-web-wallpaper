@@ -1,44 +1,32 @@
-const TASK_STATE_MAP = {
-    critic: `rgba(80, 190, 220 , 1)`,
-    aboveNormal: `rgba(70, 180, 210, 0.8)`,
-    normal: `rgba(60, 170, 200, 0.6)`,
-    underNormal: `rgba(50, 160, 190, 0.4)`,
-    initial: `rgba(40, 150, 180, 0.2)`
+export function setCurrentTime(){
+    document.getElementById("time").innerText = getCurrentTime();
 }
 
-export function changeButtonAppearance(HTMLel){
-    let elClassList = HTMLel.classList;
+export function setCurrentDate(){
+    document.getElementById("date").innerText = getCurrentDate();
+}
 
-    if(elClassList.contains("up")){
-        HTMLel.classList.remove("up");
-        HTMLel.classList.add("down");
-    }else{
-        HTMLel.classList.remove("down");
-        HTMLel.classList.add("up");
+function getCurrentDate(){
+    let date = new Date();
+
+    let weekday = date.toLocaleDateString('en-us', { weekday: 'long'}).substr(0, 3);
+    let numberFormatOptions = {
+        minimumIntegerDigits: 2,
+        useGrouping: false
     }
+
+    return  `${date.getFullYear()}-${date.getMonth().toLocaleString('en-ua', numberFormatOptions)}-`
+             + `${date.getDate().toLocaleString('en-ua', numberFormatOptions)} ${weekday}.`;
 }
 
-export function loadTasks(){
-    let tasksQueue = document.getElementById("tasksQueue");
+function getCurrentTime(){
+    let time = new Date();
 
-    for(let fieldName in TASK_STATE_MAP){
-        tasksQueue.appendChild(createTaskNode(TASK_STATE_MAP[fieldName]));  
-        tasksQueue.appendChild(createTaskNode(TASK_STATE_MAP[fieldName]));  
+    let numberFormatOptions = {
+        minimumIntegerDigits: 2,
+        useGrouping: false
     }
-}
 
-function createTaskNode(color){
-    let el = document.createElement("div");
-    el.classList.add("taskNode");
-    el.classList.add("panelElementStyle");
-
-    let child1 = el.appendChild(document.createElement("div"));
-    child1.classList.add("nodeText");
-
-    let child2 = el.appendChild(document.createElement("div"));
-    child2.classList.add("NodeCircle");
-    child2.style.background = color;
-    child2.style.borderColor = color;
-
-    return el;
+    return `${time.getHours()}:${time.getMinutes().toLocaleString('en-ua', numberFormatOptions)}:`
+            + `${time.getSeconds().toLocaleString('en-ua', numberFormatOptions)}`;
 }

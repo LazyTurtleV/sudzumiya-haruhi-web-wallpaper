@@ -149,6 +149,10 @@ body{
     margin-top: 0px;
 }
 
+.nodeText{
+    margin-top: 10px;
+}
+
 .NodeCircle{
     width: 90%;
     position: relative;
